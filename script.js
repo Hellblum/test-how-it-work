@@ -38,8 +38,8 @@ const sum = users.reduce(function (accumulator, currentValue) {
 
 // console.log(sum/users.length);
 
-const findObj = users.find(function (item) {
-	return item.name === "Mykhailo";
+const findObj = users.filter(function (item) {
+	return item.age > 18;
 });
 
 console.log(findObj);
