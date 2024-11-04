@@ -24,7 +24,32 @@ const users = [
 		age: 14,
 		sex: "male",
 	},
+	{
+		name: "Pedro",
+		age: 44,
+		sex: "male",
+	}
 ];
+
+let count = {
+	men : 0,
+	woman : 0
+}
+/* users.forEach(function(element,index) {
+	element.sex === "male" ? count.men++ : count.woman++; 
+})
+console.log(count); */
+
+const adults = users.filter(item => item.age >= 25);
+
+console.log(adults);
+
+
+
+					for(let item of users) {
+						console.log(item);
+}
+
 
 // const correctNames = users.map(function (item) {
 // 	return item.sex === "male" ? "Mr. " + item.name : "Mrs." + item.name;
@@ -42,6 +67,17 @@ const findObj = users.filter(function (item) {
 	return item.age > 18;
 });
 
-console.log(findObj);
+// console.log(findObj);
 
+// const findSomeSex = users.forEach(function (item) {
+// 	console.log(item);
+// });
 
+// console.log(findSomeSex);
+
+function getMoneyRemaining(bankAccount, banknoteDenomination = 100) {
+	return bankAccount % banknoteDenomination;
+};
+
+// console.log(getMoneyRemaining(1473,20));
+// console.log(getMoneyRemaining(1250,50));
